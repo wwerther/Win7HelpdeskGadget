@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+	<name>Empty</name>
+	<namespace>de.wwerther.gadgets.empty</namespace>
+	<version>0.1</version>
+	<author name="The Author's name">
+		<info url="http://example.com/" text="About this plugin"/> -->
+		<logo height="50" width="100" src="author.png"/>
+	</author>
+	<copyright>&#169; 2011 Walter Werther</copyright>
+	<description>This is a short description of this Plugin
+It has support for multiple lines by just adding a line-break in the description tag.
+ - Feature A of Gadget
+ - Feature B of Gadget
+ - .... </description>
+	<icons>
+		<icon height="100" width="125" src="logo.png"/>
+	</icons>
+	<hosts>
+		<host name="sidebar">
+			<autoscaleDPI>true</autoscaleDPI>
+			<base type="HTML" apiVersion="1.0.0" src="main.html" />
+			<permissions>full</permissions>
+			<platform minPlatformVersion="0.3" />
+			<defaultImage src="drag.png"/>
+		</host>
+	</hosts>
+</gadget>
