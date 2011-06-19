@@ -4,11 +4,14 @@
 	<meta http-equiv="MSThemeCompatible" CONTENT="yes" />
 	<meta http-equiv="Content-Type" content="text/html; charset=Unicode" />
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
+	<script src="alert.vbs" type="text/vbscript"></script>
 	<script src="js/main.js" language="javascript"  type="text/javascript"></script>
 </head>
 <body dir="ltr" scroll="no" onload="loadMain()" >
 	<g:background id="background" style="position:absolute;z-index:-1"></g:background>
-	<img id="openFlyout" style="margin-left:2px" alt="Flyout"  src="../images/al.png" onclick="openFlyout();" />
-	<span id="message">No msg.</span>
+	<div id="content">
+		<img id="openFlyout" style="margin-left:2px" alt="Flyout"  src="../images/al.png" onclick="toggleFlyout()" />
+		<span id="message" onclick="vbalert('test')">No msg.</span>
+	</div>
 </body>
 </html>
