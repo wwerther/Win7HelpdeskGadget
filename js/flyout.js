@@ -1,7 +1,7 @@
 function FlyoutSetup() {
 	this.height=180;
 	this.width=250;
-	this.FlyoutBg = "url(../images/bg.png)";
+	this.FlyoutBg = "url(./images/bg.png)";
 
 	this.onLoad=function() {
 		log("onLoad");

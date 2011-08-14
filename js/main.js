@@ -4,11 +4,11 @@ function GadgetSetup() {
 	 */
 	this.gadgetDockWidth = 130;
 	this.gadgetDockHeight = 100;
-	this.gadgetDockedBg = "url(../images/bg.png)";
+	this.gadgetDockedBg = "url(./images/bg.png)";
 
 	this.gadgetUnDockWidth = 300;
 //	this.gadgetUnDockHeight = 200;
-	//this.gadgetUnDockedBg = "url(../images/bg_undocked.png)";
+	//this.gadgetUnDockedBg = "url(./images/bg_undocked.png)";
 
 	// Amount of time desired to perform transition (in seconds).
 	this.gadgetDockTransitionTime = 2;

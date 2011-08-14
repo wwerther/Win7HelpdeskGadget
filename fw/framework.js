@@ -19,7 +19,7 @@ var gf=new function() {
 		/*
 		 * Associate the settings-menu if we find a settings.html
 		 */
-		if (fileExists(System.Gadget.path+"/de-DE/settings.html")) {
+		if (fileExists(System.Gadget.path+"/settings.html")) {
 		        System.Gadget.settingsUI = "settings.html";
         		System.Gadget.onSettingsClosed = function(p_event) {
 				if (p_event.closeAction == p_event.Action.commit) {
@@ -33,7 +33,7 @@ var gf=new function() {
 		/*
 		 * Associate the flyout if we find a flyout-file
 		 */
-		if (fileExists(System.Gadget.path+"/de-DE/flyout.html")) {
+		if (fileExists(System.Gadget.path+"/flyout.html")) {
 			System.Gadget.Flyout.file = "flyout.html";
 	        	System.Gadget.Flyout.onHide = function() {
 				if (Setup.onFlyoutClosed) Setup.onFlyoutClosed();
