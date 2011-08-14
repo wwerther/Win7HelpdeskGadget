@@ -2,7 +2,7 @@
 <gadget>
   <name>HelpDesk</name>
   <namespace>de.wwerther.gadgets.helpdesk</namespace>
-  <version><!--_locComment_text="{Locked}"-->0.6</version>
+  <version>0.7</version>
   <author name="Walter Werther">
 	  <info url="http://www.wwerther.de/" text="About this plugin"/> 
 	  <logo height="50" width="100" src="author.png"/>
