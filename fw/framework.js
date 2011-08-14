@@ -120,8 +120,61 @@ var gf=new function() {
 	    }
 	    System.Gadget.endTransition(System.Gadget.TransitionType.morph, Setup.gadgetDockTransitionTime);
 	}
+
+
+	this.readSetting=function (name,defaultval) {
+		return System.Gadget.Settings.read(name) || defaultval;
+	}
+
+	this.writeSetting=function (name,value) {
+		System.Gadget.Settings.write(name,value);
+	}
+
+	this.loadFlyout=function () {
+		Setup=new FlyoutSetup();
+		log("LoadFlyout");
+		var oBackground = document.getElementById("background");
+		var oBody = document.body.style;
+		if (oBackground) {
+			if (Setup.FlyoutBg) oBackground.src = Setup.FlyoutBg;
+			oBackground.style.width=Setup.width;
+			oBackground.style.height=Setup.height;
+		} else {
+			if (Setup.FlyoutBg) oBody.src = Setup.FlyoutBg;
+		}
+		oBody.width=Setup.width;
+		oBody.height=Setup.height;
+
+		if (Setup.onLoad) Setup.onLoad();
+	}
+
+	this.loadSettings=function () {
+		Setup=new SettingsSetup();
+		log("LoadSettings");
+
+		System.Gadget.onSettingsClosing = function(p_event) {
+			if (p_event.closeAction == p_event.Action.commit) {
+				if (Setup.onSettingsClosed) Setup.onSettingsClosed();
+			} else {
+				if (Setup.onSettingsCancelled) Setup.onSettingsCancelled();
+			}
+		};
+
+		log ("loadingdefaults");
+
+		if (Setup.onLoad) Setup.onLoad();
+	}
 }
 
+function isNumber (o) {
+	return ! isNaN (o-0);
+}
+
+function execute(command) {
+	var wshShell = new ActiveXObject('WScript.Shell');
+        var exec = wshShell.Run(command);
+        System.Gadget.Shell.execute(exec);
+}
 
 function fileExists(filename) {
 	if (ActiveXObject) {
@@ -130,3 +183,7 @@ function fileExists(filename) {
 	}
 }
 
+function log(message) {
+	var debug=document.getElementById("debug");
+	if (debug) debug.innerHTML = message+"<br/>"+debug.innerHTML;
+}

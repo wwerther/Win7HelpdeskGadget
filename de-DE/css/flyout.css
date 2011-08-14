@@ -1,8 +1,15 @@
 body {
-	background: url(../images/bg_flyout.png);
-	color: #4AA8D7;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	font-family:Arial; 
 	font-size:8pt;
-        width:250;
-        height:180;
+	color: #4AA8D7;
+}
+#content {
+	z-index:1;
+	color: #4AA8D7;
+}
+#logo {
+	margin-top:4px;
+	margin-left:15px;
 }

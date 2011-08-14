@@ -4,11 +4,22 @@
 	<meta http-equiv="MSThemeCompatible" CONTENT="yes" />
         <meta http-equiv="Content-Type" content="text/html; charset=Unicode" />
         <link href="css/settings.css" rel="stylesheet" type="text/css" />
+	<script src="../fw/alert.vbs" type="text/vbscript"></script>
+	<script src="../fw/framework.js" language="javascript"  type="text/javascript"></script>
         <script src="js/settings.js" language="javascript"  type="text/javascript"></script>
 </head>
-<body onload="loadMain()" >
-	<p>
-	No settings can be set yet.
-	</p>
+<body onload="gf.loadSettings()" >
+	<div id="content">
+		<table cellspacing="0" cellpadding="4" border="0">
+			<tr><th colspan="2">Pfade</th></tr>
+			<tr><td>Teamviewer</td>
+				<td>
+					<input type="text" style="font-size:7pt; color:black;" id="tvpath" size="40" />
+				</td>
+			</tr>
+		</table>
+
+	</div>
+	<div id="nodebug" />
 </body>
 </html>

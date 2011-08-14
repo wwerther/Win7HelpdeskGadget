@@ -1,18 +1,50 @@
 <html>
 <head>
-	<title>Empty-Gadget</title>
+	<title>Helpdesk-Gadget</title>
 	<meta http-equiv="MSThemeCompatible" CONTENT="yes" />
 	<meta http-equiv="Content-Type" content="text/html; charset=Unicode" />
 	<link href="css/main.css" rel="stylesheet" type="text/css" />
 	<script src="../fw/alert.vbs" type="text/vbscript"></script>
 	<script src="../fw/framework.js" language="javascript"  type="text/javascript"></script>
 	<script src="js/main.js" language="javascript"  type="text/javascript"></script>
+	
 </head>
 <body dir="ltr" scroll="no" onload="gf.loadMain()" >
 	<g:background id="background" style="position:absolute;z-index:-1"></g:background>
+
 	<div id="content">
-		<img id="openFlyout" style="margin-left:2px" alt="Flyout"  src="../images/al.png" onclick="gf.toggleFlyout()" />
-		<span id="message" onclick="vbalert('test')">No msg.</span>
+		<img id="logo" src="../images/logo.png" alt="Helpdesk" />
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr style="margin-bottom:3pt">
+				<td valign="middle" style="margin-left:2pt;white-space:no-wrap;">
+					<img id="openFav" style="margin-left:2px" alt="Favorites"  src="../images/al.png" onclick="javascript:gf.toggleFlyout()" />
+					<input type="text" style="margin-left:2pt; font-size:7pt; color:black;" id="serverName" onkeypress="javascript:inputtext(event)" size="12" />
+				</td>
+			<td valign="middle">
+					<img id="cmdStart"alt="Start" style="margin-left:2pt"  src="../images/button_def.gif" 
+						onclick="javascript:startTool()" 
+						onmouseover="cmdStart.src='../images/button_hot.gif'"
+						onmouseout="cmdStart.src='../images/button_def.gif'"/>
+					</td>
+			</tr>
+			<tr style="margin-bottom:0">
+				<td valign="middle" align="left" style="font-size:8pt; coloralt:#ffffff; color:#ffcc33; margin-left:2pt">
+					<input type="checkbox" onclick="javascript:saveRa()" id="chkRemoteAssistance" /><img src="../images/ra.png" alt="Remote-Assistance"/>
+				<input type="checkbox" onclick="javascript:saveCons()" id="chkConsole" /><img src="../images/cons.png" alt="Adminconsole"/></td>
+				<td align="center">
+				&nbsp;
+				</td>
+			</tr>
+			<tr style="padding:4px;margin:2px;height:3px;background:url(../images/tr.png)"><td></td></tr>
+			<tr style="margin-top:4px;">
+				<td colspan="2" valign="middle" align="left" style="font-size:8pt; coloralt:#ffffff; color:#ffcc33; margin-left:2px">
+					<img id="cmdPing" style="margin-left:2px" alt="Ping"  src="../images/ping.png" onclick="javascript:cmdPing()" />
+					<img id="cmdMtr" alt="Traceroute" style="margin-left:2px" src="../images/traceroute.png" onclick="javascript:cmdMtr()" />
+					<img id="cmdPutty" alt="Putty" style="margin-left:2px" alt="Ping"  src="../images/putty.png" onclick="javascript:cmdPutty()" />
+				</td>
+			</tr>
+		</table>
 	</div>
+	<div id="nodebug" />
 </body>
 </html>
